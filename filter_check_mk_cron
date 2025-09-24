@@ -1,0 +1,12 @@
+#!/bin/sh
+
+grep includedir /etc/inc/filter.inc
+if [ $? -eq 0 ]
+then
+        exit 0
+else
+        awk '/fclose\(\$xinetd_fd\)\;/{print "fwrite($xinetd_fd, \"includedir /opt/etc/xinetd.d\");"}1' /etc/inc/filter.inc > /etc/inc/filter.inc.temp
+        mv /etc/inc/filter.inc.temp /etc/inc/filter.inc
+        /etc/rc.filter_configure
+fi
+exit 0
