@@ -1,7 +1,7 @@
 # checkmk_agent_pfsense
-Here's instructions on how to get Check_MK running on pfSense 2.3+ (the latest verified setup being 2.4.3_1).
+Here's instructions on how to get Check_MK running on pfSense 2.3+ (the latest verified setup being 2.8.1-RELEASE).
 
-Since the original thread is getting old, the Netgate forum recommended a new thread, which would probably be helpful anyway so people don't have to search through all the replies to find the useful stuff. Most of the credit for this configuration goes to @joeclifford and @FJerusalem, with a small update I've added.
+Forked from https://forum.netgate.com/topic/131967/check_mk-on-pfsense-2-4-w-update-persistence
 
 For issues getting set up, I would recommend checking out the original thread to see if your issue has already been discussed there.
 
@@ -76,4 +76,5 @@ Add any firewall rules that may be needed for your network environment.
 
 There you have it! You should now be able to point your monitoring server to the LAN address of your firewall to get the status from Check_MK. You can always configure extra network rules and/or port forwarding if you need access on another interface.
 
-Again, thanks to @joeclifford and @FJerusalem for their work on this idea!
+Thanks to [calebh](https://forum.netgate.com/user/calebh) for this post
+
