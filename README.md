@@ -20,7 +20,7 @@ mkdir -p /opt/etc/xinetd.d
 
 Download the latest version of the check_mk_agent for FreeBSD:
 ```
-curl "http://git.mathias-kettner.de/git/?p=check_mk.git;a=blob_plain;f=agents/check_mk_agent.freebsd;hb=HEAD" -o /opt/bin/check_mk_agent
+curl https://raw.githubusercontent.com/albertfont/checkmk_agent_pfsense/refs/heads/main/bin/check_mk_agent -o /opt/bin/check_mk_agent
 ```
 Make it executable:
 ```
@@ -33,12 +33,12 @@ Verify the agent can run:
 ```
 Create the service config file using the template below:
 ```
-wget /opt/etc/xinetd.d/check_mk
+curl https://raw.githubusercontent.com/albertfont/checkmk_agent_pfsense/refs/heads/main/etc/xinetd.d/check_mk -o /opt/etc/xinetd.d/check_mk
 ```
 
 Create the script to ensure the check_mk service will be persistent across system updates:
 ```
-wget /opt/filter_check_mk_cron
+curl https://raw.githubusercontent.com/albertfont/checkmk_agent_pfsense/refs/heads/main/filter_check_mk_cron -o /opt/filter_check_mk_cron
 ```
 
 Make it executable:
