@@ -64,13 +64,13 @@ Jun 15 09:26:05	xinetd	36043	readjusting service check_mk
 Go to System > Package Manager, and install the "Cron" package if necessary
 
 Go to Services > Cron > Add, and add a cron job to make the script run every 15 minutes:
-*/15
-*
-*
-*
-*
-root
-/opt/filter_check_mk_cron
+ - ``*/15``
+ - ``*``
+ - ``*``
+ - ``*``
+ - ``*``
+ - ``root``
+ - ``/opt/filter_check_mk_cron``
 
 Add any firewall rules that may be needed for your network environment.
 
